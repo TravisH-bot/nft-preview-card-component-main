@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Font */
+  --font: "Outfit", sans-serif;
+
+  /* Primary Colors */
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --cyan-opaque: hsla(178, 100%, 50%, 0.5);
+
+  /* Neutral Colors */
+  --very-dark-blue-mainbg: hsl(217, 54%, 11%);
+  --very-dark-blue-cardbg: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: var(--very-dark-blue-mainbg);
+}
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font);
+}
+
+.card {
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--very-dark-blue-cardbg);
+  width: 16em;
+  height: 28em;
+}
+
+.nft-img {
+  position: relative;
+  border-radius: 0.5em;
+  width: 14em;
+  height: 14em;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+.overlay {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+  position: absolute;
+  width: 14em;
+  height: 14em;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: var(--cyan-opaque);
+  margin-top: 1em;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.info {
+  margin: 1em;
+  flex-direction: column;
+}
+
+.card-title {
+  color: var(--white);
+  font-weight: 700;
+  margin: 0 0 0.8em 0;
+}
+.card-title:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+.nft-info {
+  color: var(--soft-blue);
+  font-weight: 300;
+  font-size: 0.8em;
+  margin: 0 0 0.8em 0;
+}
+
+.price-time {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 0.8em 0;
+}
+
+.price {
+  display: flex;
+  color: var(--cyan);
+  font-size: 0.8em;
+}
+.eth {
+  margin-right: 0.3em;
+}
+
+.time {
+  display: flex;
+  color: var(--soft-blue);
+  font-size: 0.8em;
+}
+.clock {
+  margin-right: 0.2em;
+}
+
+hr {
+  color: var(--very-dark-blue-line);
+}
+
+.creator {
+  margin: 1.2em 0 0.8em 0;
+  display: flex;
+  align-items: center;
+  align-content: baseline;
+  justify-content: space-around;
+}
+
+.jules {
+  height: 2em;
+  width: 2em;
+  margin-left: -2.1em;
+  border: 0.1em solid var(--white);
+  border-radius: 50%;
+}
+
+.credit {
+  font-size: 0.8em;
+  color: var(--soft-blue);
+  margin-left: -4em;
+}
+
+.name {
+  color: var(--white);
+}
+.name:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+.attribution {
+  margin-top: 5em;
+  text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  .attribution {
+    margin: 2em 2em 0 2em;
+  }
+}
